@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prahaar Automation | Industrial Automation, Mechatronics & Turnkey Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        logoGreen: '#82c324',
+                        logoGreenDark: '#6ca71b',
+                        logoOrange: '#f49a0e',
+                        logoOrangeDark: '#d88304',
+                        darkNavy: '#1a2228',
+                        darkNavyCard: '#242f37',
+                        slateBg: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hide all page sections by default */
+        .page-sheet {
+            display: none;
+        }
+        /* Show active sheet */
+        .page-sheet.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-slateBg text-slate-800 font-sans antialiased flex flex-col min-h-screen overflow-y-scroll">
+
+    <!-- TOP UTILITY BAR -->
+    <div class="bg-darkNavy text-slate-300 text-xs py-2.5 px-4 md:px-16 flex flex-col sm:flex-row justify-between items-center border-b border-slate-800">
+        <div class="flex items-center space-x-6 mb-1 sm:mb-0">
+            <span>📞 +91 99160 21912</span>
+            <span>✉️ info@prahaarautomation.com</span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <span class="text-logoGreen font-semibold">Mechatronics & Machine Control Specialists</span>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER / NAVIGATION -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 md:px-16 py-3 flex justify-between items-center">
+            <div class="flex items-center cursor-pointer min-w-[200px]" onclick="showSheet('home')">
+                <img src="PrahaarH2.png" alt="Prahaar Logo" class="h-14 md:h-16 w-auto object-contain">
+            </div>
+            <!-- STABLE NAVIGATION BAR (TRANSPARENT BORDER PREVENTS LAYOUT SHIFT) -->
+            <nav class="hidden lg:flex items-center space-x-8 font-semibold text-sm text-slate-700">
+                <button onclick="showSheet('home')" id="nav-home" class="nav-btn text-logoOrange border-b-2 border-logoOrange pb-1 transition-none whitespace-nowrap">Home</button>
+                <button onclick="showSheet('about')" id="nav-about" class="nav-btn border-b-2 border-transparent hover:text-logoOrange pb-1 transition-none whitespace-nowrap">About Us</button>
+                <button onclick="showSheet('solutions')" id="nav-solutions" class="nav-btn border-b-2 border-transparent hover:text-logoOrange pb-1 transition-none whitespace-nowrap">Solutions & Products</button>
+                <button onclick="showSheet('capabilities')" id="nav-capabilities" class="nav-btn border-b-2 border-transparent hover:text-logoOrange pb-1 transition-none whitespace-nowrap">Capabilities</button>
+                <button onclick="showSheet('contact')" id="nav-contact" class="nav-btn border-b-2 border-transparent hover:text-logoOrange pb-1 transition-none whitespace-nowrap">Contact Us</button>
+            </nav>
+            <div class="min-w-[200px] text-right">
+                <button onclick="showSheet('contact')" class="bg-logoOrange hover:bg-logoOrangeDark text-white font-bold text-sm px-5 py-2.5 rounded shadow transition whitespace-nowrap">Enquire Now</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA (INDEPENDENT SHEETS) -->
+    <main class="flex-grow">
+
+        <!-- SHEET 1: HOME -->
+        <div id="sheet-home" class="page-sheet active">
+            <section class="bg-darkNavy text-white py-28 px-4 md:px-16">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="bg-emerald-950/80 text-logoGreen text-xs font-bold uppercase px-3 py-1 rounded tracking-widest border border-logoGreen/30">Smart Mechatronics</span>
+                        <h1 class="text-4xl md:text-5xl font-extrabold mt-4 mb-6 leading-tight">Precision Control. <br><span class="text-logoOrange">Seamless Automation</span></h1>
+                        <p class="text-slate-300 text-base md:text-lg mb-8 leading-relaxed">Engineering advanced automation solutions for precision, reliability, and industrial excellence.</p>
+                    </div>
+                    <div class="bg-darkNavyCard p-3 rounded-xl shadow-2xl border border-slate-700">
+                        <div class="bg-slate-900/90 rounded-lg p-6 text-center text-slate-400 flex flex-col justify-center items-center border border-slate-800">
+                            <img src="6509a5bdf977efe1c9e4c827_Engineering career in mechatronics.webp" alt="Integrated Automation Ecosystem" class="w-full h-48 object-cover rounded-md mb-4">
+                            <p class="font-bold text-white text-lg">Integrated Automation Ecosystem</p>
+                            <p class="text-sm mt-2 text-slate-400">Servo Drives, Motion Controllers, PLC, SCADA & Turnkey Panel Integration.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- SHEET 2: ABOUT US -->
+        <div id="sheet-about" class="page-sheet">
+            <section class="py-24 px-4 md:px-16 max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">About <span class="text-logoOrange">Prahaar</span> <span class="text-logoGreen">Automation</span></h2>
+                    <div class="w-16 h-1 bg-logoGreen mx-auto mt-3 rounded-full"></div>
+                </div>
+                
+                <div class="bg-white p-8 md:p-14 rounded-2xl shadow-sm border border-slate-200 leading-relaxed mb-16">
+                    <p class="text-slate-700 text-lg md:text-xl font-medium mb-6">
+                        Prahaar Automation is a professionally managed industrial automation solutions company, driven by a team of experienced mechatronics and automation specialists. We provide innovative, reliable, and high-performance machine control solutions powered by advanced industrial automation technologies.
+                    </p>
+                    <p class="text-slate-600 text-base mb-8">
+                        With expertise in automation systems, control solutions, and integrated engineering, we partner with industries to enhance productivity, efficiency, and operational excellence through customized end-to-end automation solutions.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-slate-100 text-center">
+                        <div class="p-4 bg-slateBg rounded-xl border border-slate-100 flex flex-col items-center">
+                            <img src="mechatronics-driven.png" alt="Mechatronics Driven" class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="font-bold text-slate-900 text-lg text-logoOrange">Mechatronics Driven</h3>
+                            <p class="text-slate-500 text-sm mt-1">Advanced engineering expertise for intelligent machine design and precision automation.</p>
+                        </div>
+                        <div class="p-4 bg-slateBg rounded-xl border border-slate-100 flex flex-col items-center">
+                            <img src="turnkey-solutions.png" alt="Turnkey Solutions" class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="font-bold text-slate-900 text-lg text-logoGreen">Turnkey Solutions</h3>
+                            <p class="text-slate-500 text-sm mt-1">Complete automation solutions from concept to commissioning.</p>
+                        </div>
+                        <div class="p-4 bg-slateBg rounded-xl border border-slate-100 flex flex-col items-center">
+                            <img src="industrial-excellence.png" alt="Industrial Excellence" class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="font-bold text-slate-900 text-lg text-logoOrange">Industrial Excellence</h3>
+                            <p class="text-slate-500 text-sm mt-1">Reliable, high-performance systems built for modern manufacturing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900">Our Core Values</h3>
+                    <div class="w-12 h-1 bg-logoOrange mx-auto mt-2 rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-t-logoGreen border-x border-b border-slate-200 text-center">
+                        <div class="text-2xl font-bold text-logoGreen mb-2">⭐ Quality</div>
+                        <p class="text-slate-600 text-sm leading-relaxed">We focus on delivering high-quality products and reliable solutions.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-t-logoOrange border-x border-b border-slate-200 text-center">
+                        <div class="text-2xl font-bold text-logoOrange mb-2">🤝 Teamwork</div>
+                        <p class="text-slate-600 text-sm leading-relaxed">We work together as a team to understand customer needs.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-t-logoGreen border-x border-b border-slate-200 text-center">
+                        <div class="text-2xl font-bold text-logoGreen mb-2">🔥 Passion</div>
+                        <p class="text-slate-600 text-sm leading-relaxed">Our passion and commitment drive us to achieve excellence.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-t-logoOrange border-x border-b border-slate-200 text-center">
+                        <div class="text-2xl font-bold text-logoOrange mb-2">🛡️ Integrity</div>
+                        <p class="text-slate-600 text-sm leading-relaxed">We believe in honesty, transparency, and fairness in all actions.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- SHEET 3: SOLUTIONS & PRODUCTS -->
+        <div id="sheet-solutions" class="page-sheet">
+            <section class="bg-white py-24 px-4 md:px-16">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Our Machine Control Solutions & Products</h2>
+                        <p class="text-slate-600 mt-2">Integrating world-class industrial automation hardware for precise control performance.</p>
+                        <div class="w-16 h-1 bg-logoGreen mx-auto mt-3 rounded-full"></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-slateBg p-8 rounded-xl border border-slate-200">
+                            <div class="text-logoOrange text-3xl mb-4">⚡</div>
+                            <h3 class="font-bold text-slate-900 text-xl mb-2">AC Servo Motors & Drives</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">High-response closed-loop motor control solutions delivering pinpoint accuracy and dynamic torque performance.</p>
+                        </div>
+                        <div class="bg-slateBg p-8 rounded-xl border border-slate-200">
+                            <div class="text-logoGreen text-3xl mb-4">🎯</div>
+                            <h3 class="font-bold text-slate-900 text-xl mb-2">Machine & Motion Controllers</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Advanced multi-axis motion control hardware designed for synchronised high-speed industrial machinery.</p>
+                        </div>
+                        <div class="bg-slateBg p-8 rounded-xl border border-slate-200">
+                            <div class="text-logoOrange text-3xl mb-4">💻</div>
+                            <h3 class="font-bold text-slate-900 text-xl mb-2">Programmable Logic Controllers (PLC)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Robust modular and compact PLCs engineered for mission-critical sequential and process automation tasks.</p>
+                        </div>
+                        <div class="bg-slateBg p-8 rounded-xl border border-slate-200">
+                            <div class="text-logoGreen text-3xl mb-4">🌀</div>
+                            <h3 class="font-bold text-slate-900 text-xl mb-2">Variable Frequency Drives (VFD)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Energy-efficient speed regulation and variable motor control for smooth handling of industrial loads.</p>
+                        </div>
+                        <div class="bg-slateBg p-8 rounded-xl border border-slate-200">
+                            <div class="text-logoOrange text-3xl mb-4">🖥️</div>
+                            <h3 class="font-bold text-slate-900 text-xl mb-2">Human Machine Interface (HMI / MMI)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">High-definition touch panels offering intuitive operator dashboards, live diagnostics, and alarms.</p>
+                        </div>
+                        <div class="bg-slateBg p-8 rounded-xl border border-slate-200">
+                            <div class="text-logoGreen text-3xl mb-4">📊</div>
+                            <h3 class="font-bold text-slate-900 text-xl mb-2">SCADA Systems</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Comprehensive plant supervisory software for enterprise-grade data acquisition, trends, and monitoring.</p>
+                        </div>
+                    </div>
+
+                    <!-- TURNKEY BANNER (COMPLETE CUSTOM FRAMEWORK) -->
+                    <div class="mt-12 bg-darkNavy text-white p-8 md:p-12 rounded-2xl flex flex-col md:flex-row justify-between items-center shadow-xl border-l-8 border-l-logoOrange">
+                        <div class="mb-6 md:mb-0">
+                            <span class="text-logoGreen font-bold text-xs uppercase tracking-widest">Complete Custom Framework</span>
+                            <h3 class="text-2xl font-bold mt-1">Turnkey Machine Control Systems & Solutions</h3>
+                            <p class="text-slate-300 text-sm mt-2 max-w-2xl">From initial schematics and panel fabrication to onboard programming and factory commissioning, we build complete plug-and-play systems.</p>
+                        </div>
+                        <button onclick="showSheet('contact')" class="bg-logoOrange hover:bg-logoOrangeDark text-white font-bold px-6 py-3 rounded shadow transition whitespace-nowrap">Request Custom Build</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- SHEET 4: CAPABILITIES -->
+        <div id="sheet-capabilities" class="page-sheet">
+            <section class="py-24 px-4 md:px-16 max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Core Engineering Capabilities</h2>
+                    <p class="text-slate-600 mt-2">Built on professional management and core mechatronic foundations.</p>
+                    <div class="w-16 h-1 bg-logoOrange mx-auto mt-3 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                        <div class="text-3xl font-black text-logoGreen mb-4">01</div>
+                        <h3 class="font-bold text-slate-900 text-xl mb-2">Systems Integration</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">We integrate multi-vendor automation components, field devices, sensors, drives, and mechanical systems into a seamless control architecture.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                        <div class="text-3xl font-black text-logoOrange mb-4">02</div>
+                        <h3 class="font-bold text-slate-900 text-xl mb-2">Control Panel Engineering</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">We design and build high-quality control panels with optimized layouts, structured wiring, and proper documentation.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                        <div class="text-3xl font-black text-logoGreen mb-4">03</div>
+                        <h3 class="font-bold text-slate-900 text-xl mb-2">On-Site Installation & Commissioning</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Our engineers provide site support, including installation, PLC programming, system tuning, calibration, and operator training.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- SHEET 5: CONTACT US -->
+        <div id="sheet-contact" class="page-sheet">
+            <section class="bg-darkNavy text-white py-24 px-4 md:px-16">
+                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <span class="text-logoGreen font-bold text-xs uppercase tracking-widest">Get In Touch</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold mt-2 mb-6">Let's Discuss Your Automation Requirements</h2>
+                        <p class="text-slate-300 text-base leading-relaxed mb-8">Partner with Prahaar Automation for high-performance machine control solutions, technical components, and complete engineering support.</p>
+                        
+                        <div class="space-y-4 text-sm text-slate-300">
+                            <p class="flex items-start space-x-3">
+                                <span class="mt-0.5">📍</span> 
+                                <span>No. 82/3, 40ft Road, KTG Road,<br>Mudduramma Layout, Sunkadakatte,<br>Bengaluru-560091</span>
+                            </p>
+                            <p class="flex items-center space-x-3"><span>📞</span> <span>+91 99160 21912</span></p>
+                            <p class="flex items-center space-x-3"><span>✉️</span> <span>info@prahaarautomation.com</span></p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white text-slate-800 p-8 md:p-10 rounded-2xl shadow-xl">
+                        <h3 class="text-xl font-bold text-slate-900 mb-6">Send Us a Message</h3>
+                        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! Your inquiry has been sent to Prahaar Automation.');">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name</label>
+                                <input type="text" required class="w-full border border-slate-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-logoOrange">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Company / Organization</label>
+                                <input type="text" required class="w-full border border-slate-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-logoOrange">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address</label>
+                                <input type="email" required class="w-full border border-slate-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-logoOrange">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Project Details or Product Requirement</label>
+                                <textarea rows="4" class="w-full border border-slate-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-logoOrange" placeholder="Mention PLC brands, servo requirements, or turnkey details..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-logoOrange hover:bg-logoOrangeDark text-white font-bold py-3 rounded transition shadow">Submit Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-10 px-4 md:px-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
+            <p>&copy; 2026 Prahaar Automation. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <button onclick="showSheet('home')" class="hover:text-white transition">Home</button>
+                <button onclick="showSheet('about')" class="hover:text-white transition">About Us</button>
+                <button onclick="showSheet('solutions')" class="hover:text-white transition">Solutions & Products</button>
+                <button onclick="showSheet('contact')" class="hover:text-white transition">Contact</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FOR SWITCHING SHEETS -->
+    <script>
+        function showSheet(sheetId) {
+            // Hide all sheets
+            const sheets = document.querySelectorAll('.page-sheet');
+            sheets.forEach(sheet => sheet.classList.remove('active'));
+
+            // Show selected sheet
+            const targetSheet = document.getElementById('sheet-' + sheetId);
+            if (targetSheet) {
+                targetSheet.classList.add('active');
+            }
+
+            // Reset active header button styling
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.classList.remove('text-logoOrange', 'border-logoOrange');
+                btn.classList.add('border-transparent');
+            });
+
+            // Highlight current header link
+            const activeBtn = document.getElementById('nav-' + sheetId);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-transparent');
+                activeBtn.classList.add('text-logoOrange', 'border-logoOrange');
+            }
+
+            // Scroll smoothly to top when switching view
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
